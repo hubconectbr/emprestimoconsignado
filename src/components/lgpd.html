@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGPD e Direitos do Titular – REDECONSIG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .dpo-info, .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #3498db;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .note {
+            background-color: #fef9e7; /* Amarelo claro para a nota */
+            border-left: 5px solid #f1c40f; /* Amarelo mais escuro */
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+         .privacy-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LGPD – Seus Direitos como Titular de Dados</h1>
+    <p>A REDECONSIG P. M. XAVIER NEGOCIOS ADMINISTRATIVOS LTDA está comprometida com a proteção dos seus dados pessoais e com a transparência no tratamento dessas informações. A Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) estabelece direitos importantes para os titulares de dados, e nós estamos preparados para atendê-los.</p>
+
+    <h2>Seus Direitos Principais</h2>
+    <p>Como titular de dados pessoais, você possui diversos direitos garantidos pela LGPD, entre eles:</p>
+    <ul>
+        <li><strong>Confirmação da existência de tratamento:</strong> Saber se tratamos dados seus.</li>
+        <li><strong>Acesso aos dados:</strong> Obter uma cópia dos seus dados pessoais que possuímos.</li>
+        <li><strong>Correção de dados:</strong> Solicitar a correção de dados incompletos, inexatos ou desatualizados.</li>
+        <li><strong>Anonimização, bloqueio ou eliminação:</strong> Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD.</li>
+        <li><strong>Portabilidade dos dados:</strong> Solicitar a transferência dos seus dados para outro fornecedor de serviço ou produto, mediante requisição expressa.</li>
+        <li><strong>Eliminação dos dados tratados com consentimento:</strong> Solicitar a eliminação dos seus dados pessoais tratados com base no seu consentimento.</li>
+        <li><strong>Informação sobre compartilhamento:</strong> Saber com quais entidades públicas e privadas compartilhamos seus dados.</li>
+        <li><strong>Informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa.</strong></li>
+        <li><strong>Revogação do consentimento:</strong> Revogar o consentimento a qualquer momento, de forma fácil e gratuita.</li>
+    </ul>
+    <p>Para mais detalhes sobre como tratamos seus dados, consulte nossa <a href="[LINK_PARA_SUA_POLITICA_DE_PRIVACIDADE.HTML]" target="_blank">Política de Privacidade</a>.</p>
+
+    <div class="dpo-info">
+        <h2>Encarregado de Proteção de Dados (DPO)</h2>
+        <p>Para exercer seus direitos como titular de dados, ou para esclarecer qualquer dúvida sobre o tratamento de seus dados pessoais, entre em contato com nosso Encarregado de Proteção de Dados (DPO):</p>
+        <p><strong>Nome:</strong> Benedito Palheta dos Santos</p>
+        <p><strong>E-mail:</strong> <a href="mailto:palhetasaints@gmail.com">palhetasaints@gmail.com</a></p>
+    </div>
+
+    <div class="form-container">
+        <h2>Formulário de Requisição de Titulares de Dados</h2>
+        <p>Utilize o formulário abaixo para enviar sua solicitação referente aos seus dados pessoais. Para que possamos atender à sua requisição da forma mais eficiente e segura, por favor, preencha todos os campos obrigatórios.</p>
+        
+        <form id="lgpdRequestForm" action="[URL_DO_SEU_SCRIPT_DE_PROCESSAMENTO_LGPD]" method="POST">
+            <label for="fullName">Nome Completo:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">E-mail de Contato:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cpf">CPF (para confirmação de identidade):</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+
+            <label for="requestType">Tipo de Solicitação:</label>
+            <select id="requestType" name="requestType" required>
+                <option value="">Selecione o tipo de solicitação...</option>
+                <option value="acesso_dados">Acesso aos Dados</option>
+                <option value="correcao_dados">Correção de Dados Incompletos, Inexatos ou Desatualizados</option>
+                <option value="anonimizacao_bloqueio_eliminacao">Anonimização, Bloqueio ou Eliminação de Dados</option>
+                <option value="portabilidade_dados">Portabilidade dos Dados</option>
+                <option value="eliminacao_consentimento">Eliminação de Dados Tratados com Consentimento</option>
+                <option value="info_compartilhamento">Informação sobre Compartilhamento de Dados</option>
+                <option value="revogacao_consentimento">Revogação do Consentimento</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <label for="requestDetails">Detalhes da Solicitação:</label>
+            <textarea id="requestDetails" name="requestDetails" placeholder="Descreva sua solicitação em detalhes. Se for correção, indique os dados a serem corrigidos e os novos dados." required></textarea>
+            
+            <p style="font-size:0.9em; margin-bottom:15px;">Ao enviar este formulário, você concorda que os dados fornecidos serão utilizados para processar sua solicitação conforme a LGPD e nossa Política de Privacidade.</p>
+
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+    </div>
+
+    <div class="note">
+        <p><strong>Atenção:</strong> O envio deste formulário requer uma configuração no servidor (backend) para processar os dados e encaminhá-los ao DPO. Este código HTML apenas cria a interface visual do formulário. Consulte um desenvolvedor web para implementar a funcionalidade de envio.</p>
+    </div>
+    <p class="privacy-link">Consulte nossa <a href="[LINK_PARA_SUA_POLITICA_DE_PRIVACIDADE.HTML]" target="_blank">Política de Privacidade</a>.</p>
+</body>
+</html>

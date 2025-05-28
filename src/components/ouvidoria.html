@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouvidoria – REDECONSIG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #3498db;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .note {
+            background-color: #fef9e7; /* Amarelo claro para a nota */
+            border-left: 5px solid #f1c40f; /* Amarelo mais escuro */
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+         .privacy-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ouvidoria REDECONSIG</h1>
+    <p>A Ouvidoria da REDECONSIG é um canal de comunicação de segunda instância que tem como objetivo principal receber, registrar, analisar e dar tratamento formal e adequado às manifestações dos nossos clientes e usuários que não foram satisfatoriamente resolvidas pelos nossos canais de atendimento primário.</p>
+    <p>Atuamos com independência, imparcialidade e ética, buscando a mediação de conflitos e a melhoria contínua dos nossos processos, produtos e serviços.</p>
+
+    <h2>Quando recorrer à Ouvidoria?</h2>
+    <p>Você pode acionar a Ouvidoria se:</p>
+    <ul>
+        <li>Já tentou solucionar sua questão através dos nossos canais de atendimento habituais (telefone, e-mail, chat, etc.) e não obteve uma solução satisfatória.</li>
+        <li>Deseja registrar uma reclamação sobre um atendimento, produto ou serviço.</li>
+        <li>Possui uma sugestão para aprimoramento dos nossos serviços.</li>
+        <li>Quer fazer um elogio a um atendimento ou serviço prestado.</li>
+        <li>Precisa registrar uma denúncia sobre irregularidades.</li>
+    </ul>
+    <p><strong>Prazo de Resposta:</strong> Nosso prazo para resposta às manifestações registradas na Ouvidoria é de até 10 (dez) dias úteis, podendo ser prorrogado em casos mais complexos, mediante comunicação prévia.</p>
+    
+    <div class="form-container">
+        <h2>Formulário de Manifestação à Ouvidoria</h2>
+        <p>Para registrar sua manifestação, por favor, preencha o formulário abaixo com o máximo de detalhes possível. Isso nos ajudará a analisar seu caso de forma mais ágil e eficaz.</p>
+
+        <form id="ouvidoriaForm" action="[URL_DO_SEU_SCRIPT_DE_PROCESSAMENTO_OUVIDORIA]" method="POST">
+            <label for="ouvidoriaFullName">Nome Completo:</label>
+            <input type="text" id="ouvidoriaFullName" name="ouvidoriaFullName" required>
+
+            <label for="ouvidoriaEmail">E-mail de Contato:</label>
+            <input type="email" id="ouvidoriaEmail" name="ouvidoriaEmail" required>
+
+            <label for="ouvidoriaPhone">Telefone de Contato (com DDD):</label>
+            <input type="tel" id="ouvidoriaPhone" name="ouvidoriaPhone" placeholder="(00) 00000-0000">
+            
+            <label for="ouvidoriaCpf">CPF (opcional, mas ajuda na identificação):</label>
+            <input type="text" id="ouvidoriaCpf" name="ouvidoriaCpf" placeholder="000.000.000-00">
+
+            <label for="ouvidoriaProtocolo">Nº do Protocolo de Atendimento Anterior (se houver):</label>
+            <input type="text" id="ouvidoriaProtocolo" name="ouvidoriaProtocolo">
+            
+            <label for="manifestacaoType">Tipo de Manifestação:</label>
+            <select id="manifestacaoType" name="manifestacaoType" required>
+                <option value="">Selecione o tipo...</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="elogio">Elogio</option>
+                <option value="denuncia">Denúncia</option>
+            </select>
+
+            <label for="manifestacaoDetails">Detalhes da Manifestação:</label>
+            <textarea id="manifestacaoDetails" name="manifestacaoDetails" placeholder="Descreva sua manifestação com o máximo de detalhes, incluindo datas, nomes (se aplicável) e o que você espera como solução." required></textarea>
+            
+            <p style="font-size:0.9em; margin-bottom:15px;">Os dados coletados neste formulário serão utilizados exclusivamente para o tratamento da sua manifestação pela Ouvidoria, conforme nossa <a href="[LINK_PARA_SUA_POLITICA_DE_PRIVACIDADE.HTML]" target="_blank">Política de Privacidade</a>.</p>
+
+            <button type="submit">Enviar Manifestação</button>
+        </form>
+    </div>
+
+    <div class="note">
+        <p><strong>Atenção:</strong> O envio deste formulário requer uma configuração no servidor (backend) para processar os dados e encaminhá-los à área responsável. Este código HTML apenas cria a interface visual do formulário. Consulte um desenvolvedor web para implementar a funcionalidade de envio.</p>
+    </div>
+     <p class="privacy-link">Consulte nossa <a href="[LINK_PARA_SUA_POLITICA_DE_PRIVACIDADE.HTML]" target="_blank">Política de Privacidade</a>.</p>
+</body>
+</html>

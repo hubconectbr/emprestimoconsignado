@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco – REDECONSIG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #3498db;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .note {
+            background-color: #fef9e7; /* Amarelo claro para a nota */
+            border-left: 5px solid #f1c40f; /* Amarelo mais escuro */
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        .company-intro p {
+            margin-bottom: 15px;
+        }
+         .privacy-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Trabalhe Conosco na REDECONSIG</h1>
+
+    <div class="company-intro">
+        <h2>Venha Fazer Parte da Nossa Equipe!</h2>
+        <p>A REDECONSIG P. M. XAVIER NEGOCIOS ADMINISTRATIVOS LTDA é uma empresa que atua como correspondente bancário, facilitando o acesso de nossos clientes a soluções financeiras de forma ágil, transparente e personalizada. Estamos localizados em Palmas, Tocantins, e buscamos constantemente a excelência em nossos serviços.</p>
+        <p>Valorizamos profissionais dedicados, proativos e que buscam aprendizado contínuo. Se você se identifica com nossos valores e quer construir uma carreira em um ambiente dinâmico e com oportunidades de crescimento, confira nossas oportunidades ou envie seu currículo para nosso banco de talentos.</p>
+        <p><strong>Nossos Valores:</strong> [Inserir aqui 3-5 valores da REDECONSIG, ex: Ética, Transparência, Foco no Cliente, Inovação, Respeito].</p>
+        <p><strong>Por que trabalhar na REDECONSIG?</strong> [Inserir aqui 2-3 benefícios ou atrativos, ex: Ambiente colaborativo, Oportunidade de desenvolvimento profissional, Contribuição para o acesso a serviços financeiros].</p>
+    </div>
+
+    <div class="form-container">
+        <h2>Envie seu Currículo</h2>
+        <p>Preencha o formulário abaixo para se candidatar a futuras oportunidades ou para vagas específicas (se houver). Seu currículo ficará em nosso banco de talentos.</p>
+
+        <form id="workWithUsForm" action="[URL_DO_SEU_SCRIPT_DE_PROCESSAMENTO_CURRICULOS]" method="POST" enctype="multipart/form-data">
+            <label for="candidateName">Nome Completo:</label>
+            <input type="text" id="candidateName" name="candidateName" required>
+
+            <label for="candidateEmail">E-mail de Contato:</label>
+            <input type="email" id="candidateEmail" name="candidateEmail" required>
+
+            <label for="candidatePhone">Telefone de Contato (com DDD):</label>
+            <input type="tel" id="candidatePhone" name="candidatePhone" placeholder="(00) 00000-0000" required>
+
+            <label for="areaOfInterest">Área de Interesse:</label>
+            <input type="text" id="areaOfInterest" name="areaOfInterest" placeholder="Ex: Comercial, Administrativo, Atendimento" required>
+            <label for="coverLetter">Mensagem / Carta de Apresentação (opcional):</label>
+            <textarea id="coverLetter" name="coverLetter" placeholder="Fale um pouco sobre você e seus objetivos profissionais."></textarea>
+
+            <label for="resumeFile">Anexar Currículo (PDF, DOC, DOCX - máx. 5MB):</label>
+            <input type="file" id="resumeFile" name="resumeFile" accept=".pdf,.doc,.docx" required>
+            
+            <p style="font-size:0.9em; margin-bottom:15px;">Ao enviar seu currículo, você concorda que seus dados pessoais serão tratados para fins de recrutamento e seleção, conforme nossa <a href="[LINK_PARA_SUA_POLITICA_DE_PRIVACIDADE.HTML]" target="_blank">Política de Privacidade</a>.</p>
+
+            <button type="submit">Enviar Candidatura</button>
+        </form>
+    </div>
+    
+    <div class="note">
+        <p><strong>Atenção:</strong> O envio deste formulário, especialmente com upload de arquivos, requer uma configuração robusta no servidor (backend) para processar os dados, validar e armazenar o arquivo de forma segura. Este código HTML apenas cria a interface visual. Consulte um desenvolvedor web para implementar a funcionalidade de envio e garantir a segurança do processo.</p>
+    </div>
+    <p class="privacy-link">Consulte nossa <a href="/privacidade.html" target="_blank">Política de Privacidade</a>.</p>
+
+</body>
+</html>

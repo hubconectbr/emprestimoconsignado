@@ -36,11 +36,11 @@ const Footer = () => {
           <div>
             <h3 className="text-rede-orange font-bold mb-4">Links Úteis</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><a href="#" className="hover:text-rede-orange transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="hover:text-rede-orange transition-colors">Termos de Uso</a></li>
-              <li><a href="#" className="hover:text-rede-orange transition-colors">LGPD</a></li>
-              <li><a href="#" className="hover:text-rede-orange transition-colors">Ouvidoria</a></li>
-              <li><a href="#" className="hover:text-rede-orange transition-colors">Trabalhe Conosco</a></li>
+              <li><a href="/privacidade.html" className="hover:text-rede-orange transition-colors">Política de Privacidade</a></li>
+              <li><a href="/termosdeuso.html" className="hover:text-rede-orange transition-colors">Termos de Uso</a></li>
+              <li><a href="/lgpd.html" className="hover:text-rede-orange transition-colors">LGPD</a></li>
+              <li><a href="/ouvidoria.html" className="hover:text-rede-orange transition-colors">Ouvidoria</a></li>
+              <li><a href="/trabalheconosco.html" className="hover:text-rede-orange transition-colors">Trabalhe Conosco</a></li>
             </ul>
           </div>
 
