@@ -3,7 +3,7 @@ import React from 'react';
 
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5511988887777";
+    const phoneNumber = "5563999637080";
     const message = "Olá! Gostaria de saber mais sobre empréstimo consignado.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

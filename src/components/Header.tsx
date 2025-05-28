@@ -14,8 +14,9 @@ const Header = () => {
             />
           </div>
           <div className="hidden md:flex items-center space-x-6 text-sm">
-            <span className="text-rede-dark font-medium">📞 (11) 4200-8888</span>
-            <span className="text-rede-dark font-medium">📧 contato@redeconsig.com.br</span>
+            <span className="text-rede-dark font-medium">📞 (63) 99963-7080</span>
+            <span className="text-rede-dark font-medium">📧 atendimentocf4.0@gmail.com</span>
+            <span className="text-rede-dark font-medium">📍 Palmas - TO</span>
           </div>
         </div>
       </div>

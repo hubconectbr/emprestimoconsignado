@@ -64,9 +64,23 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[80vh] gradient-bg overflow-hidden">
+    <section className="relative min-h-[80vh] overflow-hidden">
+      {/* Background image with transparency */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(/lovable-uploads/0e60d583-f9a3-4a3b-b892-f75da369b79a.png)`,
+          opacity: 0.4
+        }}
+      ></div>
+      
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 gradient-bg"></div>
+      
+      {/* Additional dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative container mx-auto px-4 py-16">
+      
+      <div className="relative container mx-auto px-4 py-16 z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
@@ -136,7 +150,7 @@ const HeroSection = () => {
                     id="phone"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: formatPhone(e.target.value)})}
-                    placeholder="(11) 99999-9999"
+                    placeholder="(63) 99999-9999"
                     maxLength={15}
                     required
                     className="mt-1"
