@@ -10,9 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     name: '',
-    cpf: '',
     phone: '',
-    cep: '',
     email: '',
     amount: '',
     agreement: '',
@@ -39,15 +37,6 @@ const HeroSection = () => {
     });
   };
 
-  const formatCPF = (value: string) => {
-    return value
-      .replace(/\D/g, '')
-      .replace(/(\d{3})(\d)/, '$1.$2')
-      .replace(/(\d{3})(\d)/, '$1.$2')
-      .replace(/(\d{3})(\d{1,2})/, '$1-$2')
-      .replace(/(-\d{2})\d+?$/, '$1');
-  };
-
   const formatPhone = (value: string) => {
     return value
       .replace(/\D/g, '')
@@ -56,20 +45,13 @@ const HeroSection = () => {
       .replace(/(-\d{4})\d+?$/, '$1');
   };
 
-  const formatCEP = (value: string) => {
-    return value
-      .replace(/\D/g, '')
-      .replace(/(\d{5})(\d)/, '$1-$2')
-      .replace(/(-\d{3})\d+?$/, '$1');
-  };
-
   return (
     <section className="relative min-h-[80vh] overflow-hidden">
       {/* Background image with transparency */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(/lovable-uploads/0e60d583-f9a3-4a3b-b892-f75da369b79a.png)`,
+          backgroundImage: `url('/lovable-uploads/0e60d583-f9a3-4a3b-b892-f75da369b79a.png')`,
           opacity: 0.4
         }}
       ></div>
@@ -133,18 +115,6 @@ const HeroSection = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="cpf">CPF *</Label>
-                  <Input
-                    id="cpf"
-                    value={formData.cpf}
-                    onChange={(e) => setFormData({...formData, cpf: formatCPF(e.target.value)})}
-                    placeholder="000.000.000-00"
-                    maxLength={14}
-                    required
-                    className="mt-1"
-                  />
-                </div>
-                <div>
                   <Label htmlFor="phone">Telefone *</Label>
                   <Input
                     id="phone"
@@ -152,21 +122,6 @@ const HeroSection = () => {
                     onChange={(e) => setFormData({...formData, phone: formatPhone(e.target.value)})}
                     placeholder="(63) 99999-9999"
                     maxLength={15}
-                    required
-                    className="mt-1"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="cep">CEP *</Label>
-                  <Input
-                    id="cep"
-                    value={formData.cep}
-                    onChange={(e) => setFormData({...formData, cep: formatCEP(e.target.value)})}
-                    placeholder="00000-000"
-                    maxLength={9}
                     required
                     className="mt-1"
                   />
@@ -209,6 +164,7 @@ const HeroSection = () => {
                     <SelectItem value="estadual">Servidor Público Estadual</SelectItem>
                     <SelectItem value="municipal">Servidor Público Municipal</SelectItem>
                     <SelectItem value="militar">Forças Armadas</SelectItem>
+                    <SelectItem value="nao-sei">Não Sei Informar</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
